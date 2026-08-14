@@ -1,0 +1,53 @@
+{
+  "name": "@provenance-widgets/core",
+  "version": "1.0.0",
+  "description": "Framework-independent provenance models and controllers for ProvenanceWidgets",
+  "keywords": [
+    "provenance",
+    "visualization",
+    "widgets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProvenanceWidgets/core.git"
+  },
+  "homepage": "https://github.com/ProvenanceWidgets/core#readme",
+  "bugs": {
+    "url": "https://github.com/ProvenanceWidgets/core/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run build",
+    "prepare": "npm run build",
+    "prepack": "npm run typecheck"
+  },
+  "author": "Kaustubh Odak",
+  "contributors": ["Antariksh Verma","Jianheng Ouyang","Yiyao Tong"],
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.6.2"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "dependencies": {
+    "tstl": "^3.0.0"
+  }
+}
